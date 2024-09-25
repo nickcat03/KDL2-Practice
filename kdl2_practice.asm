@@ -63,8 +63,6 @@ SECTION "always_allow_stage_exit", ROMX[$61A1],BANK[$0F]
 ld a, 1
 nop
 
-SECTION "code_test", ROMX[$6000],BANK[37]
-
 ;lives: 0084 and 1f11 cartram
 ;loaded level data 1300 cartram
 ;HUD 1C00 vram
