@@ -9,7 +9,7 @@ DEF dulrSsba_FRAME equs "$DA3F"
 SECTION "code_hijack", ROM0[$034F]
 jp switch_to_bank_0x20
 
-SECTION "custom_rom0_code", ROM0[$0080]
+SECTION "custom_rom0_code", ROM0[$00A0]
 switch_to_bank_0x20:
     ; Save the current bank number to stack so it can be restored later
     ldh a, [$FFA4]
@@ -22,7 +22,7 @@ switch_to_bank_0x20:
     ; Go to custom code in bank 0x20
     jp custom_code
 
-SECTION "custom_code_bank", ROMX[$4000],BANK[$20]
+SECTION "custom_code_bank", ROMX[$4500],BANK[$20]
 custom_code:
     ;; Custom code for practice help should go here
 
