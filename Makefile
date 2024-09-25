@@ -24,7 +24,7 @@ execute: dirs
 	cp "$(KDL2_ROM)" "$(TMP_ROM)"
 	rgbasm -E $(SOURCE_FILE) -o $(OBJECT_FILE)
 	rgblink -n $(SYM_ROM) -O $(TMP_ROM) -o $(OUTPUT_ROM) $(OBJECT_FILE)
-	rgbfix -p 0 -f gh $(OUTPUT_ROM)
+	rgbfix -p 0xFF -m 0x1B -f gh $(OUTPUT_ROM)
 
 .PHONY: clean
 clean:
